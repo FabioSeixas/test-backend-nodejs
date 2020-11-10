@@ -5,6 +5,7 @@
 - Clone and run `yarn` to download dependencies.
 - Start a docker postgres instance. My `ormconfig.json` uses port `5432` and password `docker` by default. You can set your own settings inside that file.
 - Start a database with name `test_backend_nodejs`. You can change this default db name in `ormconfig.json` too.
+- Run migrations: `yarn typeorm migration:run`.
 - Start the server on port `3333` with `yarn dev:server`.
 
 <br>
