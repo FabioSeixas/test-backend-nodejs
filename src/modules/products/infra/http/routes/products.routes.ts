@@ -61,7 +61,7 @@ productsRouter.post('/new', async (req: Request, res: Response) => {
   return res.json(newProduct)
 })
 
-productsRouter.put('/:id/update-category', async (req: Request, res: Response) => {
+productsRouter.put('/update-category/:id', async (req: Request, res: Response) => {
   const {id} = req.params;
   const {categoryName} = req.body;
 
@@ -75,7 +75,7 @@ productsRouter.put('/:id/update-category', async (req: Request, res: Response) =
   return res.json(updatedProduct)
 })
 
-productsRouter.put('/:id/update', async (req: Request, res: Response) => {
+productsRouter.put('/update/:id', async (req: Request, res: Response) => {
   const {id} = req.params;
   const {title, description, price} = req.body;
 
@@ -91,7 +91,7 @@ productsRouter.put('/:id/update', async (req: Request, res: Response) => {
   return res.json(updatedProduct)
 })
 
-productsRouter.delete('/:id/delete', async (req: Request, res: Response) => {
+productsRouter.delete('/delete/:id', async (req: Request, res: Response) => {
   const {id} = req.params;
 
   const deleteProduct = new DeleteProductService()
